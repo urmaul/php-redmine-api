@@ -40,7 +40,7 @@ class Project extends AbstractApi
     public function listing($forceUpdate = false, $reverse = true)
     {
         if (true === $forceUpdate || empty($this->projects)) {
-            $this->all(['limit' => 100]);
+            $this->all(['limit' => 1000]);
         }
         $ret = array();
         foreach ($this->projects['projects'] as $e) {
